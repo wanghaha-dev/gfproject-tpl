@@ -1,0 +1,9 @@
+2022-12-14 15:06:33.472 500 "GET http 127.0.0.1:9999 /hello2 HTTP/1.1" 0.055, 127.0.0.1, "", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+Stack:
+1. Internal Error: runtime error: index out of range [0] with length 0
+   1).  myproject/app/api.(*helloApi).Index2
+    	C:/Users/爱学习/Downloads/gfTpl-master/gfTpl-master/app/api/hello.go:32
+   2).  myproject/router.init.0.func1
+    	C:/Users/爱学习/Downloads/gfTpl-master/gfTpl-master/router/router.go:15
+2. runtime error: index out of range [0] with length 0
+ 

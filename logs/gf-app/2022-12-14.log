@@ -1,0 +1,35 @@
+2022-12-14 11:21:50.373 [ERRO] Error 1146: Table 'mydb.z_mini_type_codes' doesn't exist, SELECT code, name FROM `z_mini_type_codes` WHERE parent_code='02'
+Stack:
+1.  myproject/app/api/artlib.(*alArtist).TypesCount
+    C:/Users/爱学习/Downloads/gfTpl-master/gfTpl-master/app/api/artlib/api_alArtist.go:221
+2.  github.com/wanghaha-dev/gf/net/ghttp.(*middleware).callHandlerFunc.func1
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_request_middleware.go:130
+3.  github.com/wanghaha-dev/gf/net/ghttp.niceCallFunc
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_func.go:52
+4.  github.com/wanghaha-dev/gf/net/ghttp.(*middleware).callHandlerFunc
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_request_middleware.go:128
+5.  github.com/wanghaha-dev/gf/net/ghttp.(*middleware).Next.func1.4
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_request_middleware.go:89
+6.  github.com/wanghaha-dev/gf/net/ghttp.niceCallFunc
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_func.go:52
+7.  github.com/wanghaha-dev/gf/net/ghttp.(*middleware).Next.func1
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_request_middleware.go:88
+8.  github.com/wanghaha-dev/gf/util/gutil.TryCatch
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/util/gutil/gutil.go:46
+9.  github.com/wanghaha-dev/gf/net/ghttp.(*middleware).Next
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_request_middleware.go:48
+10. myproject/router.init.0.func1
+    C:/Users/爱学习/Downloads/gfTpl-master/gfTpl-master/router/router.go:15
+11. github.com/wanghaha-dev/gf/net/ghttp.(*middleware).Next.func1.5
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_request_middleware.go:95
+12. github.com/wanghaha-dev/gf/net/ghttp.niceCallFunc
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_func.go:52
+13. github.com/wanghaha-dev/gf/net/ghttp.(*middleware).Next.func1
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_request_middleware.go:94
+14. github.com/wanghaha-dev/gf/util/gutil.TryCatch
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/util/gutil/gutil.go:46
+15. github.com/wanghaha-dev/gf/net/ghttp.(*middleware).Next
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_request_middleware.go:48
+16. github.com/wanghaha-dev/gf/net/ghttp.(*Server).ServeHTTP
+    C:/Users/爱学习/go/pkg/mod/github.com/wanghaha-dev/gf@v0.0.0-20221021095101-1a457e021704/net/ghttp/ghttp_server_handler.go:134
+ 

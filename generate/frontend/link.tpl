@@ -1,0 +1,1 @@
+<router-link to="/[[.RouterName]]">[[.ViewName]]</router-link>

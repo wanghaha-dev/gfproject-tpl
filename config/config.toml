@@ -1,0 +1,52 @@
+# HTTP Server
+[server]
+	Address     = ":9999"
+	ServerRoot  = "public"
+	ServerAgent = "gf-app"
+	LogPath     = "./logs/server"
+
+# Logger.
+[logger]
+    Path        = "./logs/gf-app"
+    Level       = "all"
+    Stdout      = true
+
+# Template.
+[viewer]
+    Path        = "template"
+    DefaultFile = "index.html"
+    Delimiters  =  ["{{", "}}"]
+
+# Database.
+[database]
+    [[database.default]]
+        link  = "mysql:root:111111@tcp(127.0.0.1:3306)/mydb"
+        debug = true
+
+    [[database.xx1]]
+    link  = "mysql:root:111111@tcp(127.0.0.1:3306)/mydb"
+        debug = true
+
+# Redis数据库配置
+[redis]
+default = "127.0.0.1:6379,0"
+cache   = "127.0.0.1:6379,1,123456?idleTimeout=600"
+
+# Web
+[web]
+    limit = 20
+    # hour
+    cacheTime = 10
+
+# Build
+[gfcli]
+    [gfcli.build]
+        name     = "gfproject-tpl"
+        arch     = "amd64"
+        system   = "linux,windows"
+        mod      = "none"
+        cgo      = 0
+        pack     = ""
+        version  = "v1.0.0"
+        output   = "./bin"
+        extra    = ""

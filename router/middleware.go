@@ -57,3 +57,16 @@ func AuthMiddleware(r *ghttp.Request) {
 		}
 	}
 }
+
+
+// JwtAuthMiddleware jwt身份验证中间件
+func JwtAuthMiddleware(r *ghttp.Request) {
+	token := r.GetHeader("token")
+	_, err := gjwt.ParseToken(token)
+	if err != nil {
+		utils.RespUnauthorized(r)
+		return
+	}
+
+	r.Middleware.Next()
+}

@@ -38,6 +38,13 @@ cache   = "127.0.0.1:6379,1,123456?idleTimeout=600"
     # hour
     cacheTime = 10
 
+
+[jwt]
+    secret = "afd275c26d214fc0b4ed4da8f4fea9da"
+    # expires 单位小时
+    expires = 24
+
+
 # Build
 [gfcli]
     [gfcli.build]

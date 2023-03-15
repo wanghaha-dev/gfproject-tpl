@@ -7,9 +7,11 @@ import (
 const (
 	SUCCESS_STATUS = 0
 	FAIL_STATUS    = -1
+	Unauthorized   = 401
 
-	SUCCESS_MSG = "success"
-	FAIL_MSG    = "fail"
+	SUCCESS_MSG      = "success"
+	FAIL_MSG         = "fail"
+	Unauthorized_MSG = "Unauthorized"
 )
 
 type response struct {
@@ -28,10 +30,26 @@ type pageResponse struct {
 	PageSize  int         `json:"pageSize"`
 }
 
+func RespUnauthorized(r *ghttp.Request) {
+	resp := &response{
+		Code:    Unauthorized,
+		Message: Unauthorized_MSG,
+	}
+	_ = r.Response.WriteJsonExit(resp)
+}
+
 func RespOk(r *ghttp.Request) {
 	resp := &response{
 		Code:    SUCCESS_STATUS,
 		Message: SUCCESS_MSG,
+	}
+	_ = r.Response.WriteJsonExit(resp)
+}
+
+func RespOkWithMsg(r *ghttp.Request, message string) {
+	resp := &response{
+		Code:    SUCCESS_STATUS,
+		Message: message,
 	}
 	_ = r.Response.WriteJsonExit(resp)
 }

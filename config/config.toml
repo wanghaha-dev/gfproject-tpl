@@ -23,7 +23,7 @@
         link  = "mysql:root:111111@tcp(127.0.0.1:3306)/mydb"
         debug = true
 
-    [[database.artlib]]
+    [[database.mydb]]
         link  = "mysql:root:111111@tcp(127.0.0.1:3306)/mydb"
         debug = true
 

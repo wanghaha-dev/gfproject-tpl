@@ -63,6 +63,15 @@ func RespOkWithData(r *ghttp.Request, data interface{}) {
 	_ = r.Response.WriteJsonExit(resp)
 }
 
+func RespOkWithDataAndMsg(r *ghttp.Request, data interface{}, message string) {
+	resp := &response{
+		Code:    SUCCESS_STATUS,
+		Message: message,
+		Data:    data,
+	}
+	_ = r.Response.WriteJsonExit(resp)
+}
+
 func RespOkWithDataAndCache(r *ghttp.Request, data interface{}) {
 	resp := &response{
 		Code:    SUCCESS_STATUS,
